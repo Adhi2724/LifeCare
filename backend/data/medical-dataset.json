@@ -1,0 +1,534 @@
+[
+  {
+    "disease_name": "Common Cold",
+    "category": "infectious",
+    "mandatory_symptoms": ["cough", "runny nose"],
+    "optional_symptoms": ["fever", "sore throat", "sneezing", "headache", "body ache"],
+    "symptom_weights": {
+      "cough": 3,
+      "runny nose": 3,
+      "fever": 2,
+      "sore throat": 2,
+      "sneezing": 2,
+      "headache": 1,
+      "body ache": 1
+    },
+    "specialist": "General Practitioner",
+    "precautions": [
+      "Rest and stay hydrated",
+      "Use over-the-counter cold medications",
+      "Avoid close contact with others",
+      "Cover mouth when coughing",
+      "Wash hands frequently"
+    ],
+    "severity": "mild",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Influenza (Flu)",
+    "category": "infectious",
+    "mandatory_symptoms": ["fever", "body ache"],
+    "optional_symptoms": ["chills", "fatigue", "cough", "headache", "sore throat"],
+    "symptom_weights": {
+      "fever": 4,
+      "body ache": 3,
+      "chills": 3,
+      "fatigue": 2,
+      "cough": 2,
+      "headache": 2,
+      "sore throat": 2
+    },
+    "specialist": "Infectious Disease Specialist",
+    "precautions": [
+      "Get plenty of rest",
+      "Stay hydrated with fluids",
+      "Take antiviral medications if prescribed",
+      "Use fever reducers like acetaminophen",
+      "Avoid spreading to others by staying home"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "COVID-19",
+    "category": "infectious",
+    "mandatory_symptoms": ["fever", "cough"],
+    "optional_symptoms": ["fatigue", "loss of taste", "loss of smell", "shortness of breath", "body ache"],
+    "symptom_weights": {
+      "fever": 4,
+      "cough": 4,
+      "fatigue": 3,
+      "loss of taste": 3,
+      "loss of smell": 3,
+      "shortness of breath": 4,
+      "body ache": 2
+    },
+    "specialist": "Pulmonologist",
+    "precautions": [
+      "Isolate immediately",
+      "Monitor symptoms closely",
+      "Seek medical attention if breathing difficulties",
+      "Wear mask and maintain social distance",
+      "Get tested immediately"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": ["shortness of breath"]
+  },
+  {
+    "disease_name": "Pneumonia",
+    "category": "respiratory",
+    "mandatory_symptoms": ["cough", "fever"],
+    "optional_symptoms": ["shortness of breath", "chest pain", "fatigue", "chills"],
+    "symptom_weights": {
+      "cough": 4,
+      "fever": 3,
+      "shortness of breath": 4,
+      "chest pain": 4,
+      "fatigue": 2,
+      "chills": 2
+    },
+    "specialist": "Pulmonologist",
+    "precautions": [
+      "Seek immediate medical attention",
+      "Rest in bed with head elevated",
+      "Take prescribed antibiotics",
+      "Use humidifier for breathing",
+      "Monitor oxygen levels if possible"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["shortness of breath", "chest pain"]
+  },
+  {
+    "disease_name": "Bronchitis",
+    "category": "respiratory",
+    "mandatory_symptoms": ["cough"],
+    "optional_symptoms": ["shortness of breath", "chest pain", "fatigue", "fever"],
+    "symptom_weights": {
+      "cough": 4,
+      "shortness of breath": 3,
+      "chest pain": 3,
+      "fatigue": 2,
+      "fever": 2
+    },
+    "specialist": "Pulmonologist",
+    "precautions": [
+      "Rest and stay hydrated",
+      "Use cough suppressants if needed",
+      "Avoid irritants like smoke",
+      "Use humidifier",
+      "Seek medical attention if symptoms worsen"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": ["severe shortness of breath"]
+  },
+  {
+    "disease_name": "Asthma Attack",
+    "category": "respiratory",
+    "mandatory_symptoms": ["shortness of breath", "wheezing"],
+    "optional_symptoms": ["chest tightness", "cough", "difficulty breathing"],
+    "symptom_weights": {
+      "shortness of breath": 4,
+      "wheezing": 4,
+      "chest tightness": 4,
+      "cough": 2,
+      "difficulty breathing": 4
+    },
+    "specialist": "Pulmonologist",
+    "precautions": [
+      "Use rescue inhaler immediately",
+      "Sit upright and try to stay calm",
+      "Seek emergency medical attention",
+      "Remove triggers if possible",
+      "Call emergency services if severe"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["shortness of breath", "difficulty breathing"]
+  },
+  {
+    "disease_name": "Heart Attack",
+    "category": "cardiac",
+    "mandatory_symptoms": ["chest pain"],
+    "optional_symptoms": ["shortness of breath", "left arm pain", "jaw pain", "sweating", "nausea"],
+    "symptom_weights": {
+      "chest pain": 4,
+      "shortness of breath": 4,
+      "left arm pain": 3,
+      "jaw pain": 3,
+      "sweating": 2,
+      "nausea": 2
+    },
+    "specialist": "Cardiologist",
+    "precautions": [
+      "Call emergency services immediately",
+      "Chew aspirin if not allergic",
+      "Stay calm and rest",
+      "Do not drive yourself",
+      "CPR if person becomes unconscious"
+    ],
+    "severity": "critical",
+    "emergency_flag_rules": ["chest pain"]
+  },
+  {
+    "disease_name": "Hypertension Crisis",
+    "category": "cardiac",
+    "mandatory_symptoms": ["severe headache"],
+    "optional_symptoms": ["chest pain", "shortness of breath", "blurred vision", "nosebleed", "confusion"],
+    "symptom_weights": {
+      "severe headache": 4,
+      "chest pain": 4,
+      "shortness of breath": 3,
+      "blurred vision": 3,
+      "nosebleed": 2,
+      "confusion": 3
+    },
+    "specialist": "Cardiologist",
+    "precautions": [
+      "Seek immediate medical attention",
+      "Do not ignore symptoms",
+      "Monitor blood pressure if possible",
+      "Take prescribed medications",
+      "Call emergency if severe symptoms"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["severe headache", "chest pain"]
+  },
+  {
+    "disease_name": "Arthritis",
+    "category": "musculoskeletal",
+    "mandatory_symptoms": ["joint pain"],
+    "optional_symptoms": ["joint stiffness", "swelling", "reduced mobility", "fatigue"],
+    "symptom_weights": {
+      "joint pain": 4,
+      "joint stiffness": 3,
+      "swelling": 3,
+      "reduced mobility": 3,
+      "fatigue": 1
+    },
+    "specialist": "Rheumatologist",
+    "precautions": [
+      "Rest affected joints",
+      "Apply ice or heat as appropriate",
+      "Take anti-inflammatory medications",
+      "Maintain healthy weight",
+      "Exercise regularly within limits"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Sprained Ankle",
+    "category": "musculoskeletal",
+    "mandatory_symptoms": ["ankle pain", "swelling"],
+    "optional_symptoms": ["bruising", "difficulty walking", "instability"],
+    "symptom_weights": {
+      "ankle pain": 4,
+      "swelling": 4,
+      "bruising": 2,
+      "difficulty walking": 3,
+      "instability": 2
+    },
+    "specialist": "Orthopedic Surgeon",
+    "precautions": [
+      "Rest, Ice, Compression, Elevation (RICE)",
+      "Avoid putting weight on injured ankle",
+      "Use ankle brace or wrap",
+      "Elevate foot above heart level",
+      "See doctor if severe pain or unable to walk"
+    ],
+    "severity": "mild",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Migraine",
+    "category": "neurological",
+    "mandatory_symptoms": ["severe headache"],
+    "optional_symptoms": ["nausea", "vomiting", "sensitivity to light", "sensitivity to sound", "aura"],
+    "symptom_weights": {
+      "severe headache": 4,
+      "nausea": 3,
+      "vomiting": 3,
+      "sensitivity to light": 2,
+      "sensitivity to sound": 2,
+      "aura": 2
+    },
+    "specialist": "Neurologist",
+    "precautions": [
+      "Rest in dark, quiet room",
+      "Apply cold compress to forehead",
+      "Take prescribed migraine medication",
+      "Avoid triggers like certain foods",
+      "Practice stress management"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Stroke",
+    "category": "neurological",
+    "mandatory_symptoms": ["sudden weakness", "sudden numbness"],
+    "optional_symptoms": ["facial drooping", "speech difficulty", "vision problems", "dizziness", "severe headache"],
+    "symptom_weights": {
+      "sudden weakness": 4,
+      "sudden numbness": 4,
+      "facial drooping": 4,
+      "speech difficulty": 4,
+      "vision problems": 3,
+      "dizziness": 2,
+      "severe headache": 3
+    },
+    "specialist": "Neurologist",
+    "precautions": [
+      "Call emergency services immediately",
+      "Note time symptoms started",
+      "Do not give food or drink",
+      "Do not drive to hospital",
+      "Time is critical for treatment"
+    ],
+    "severity": "critical",
+    "emergency_flag_rules": ["sudden weakness", "facial drooping", "speech difficulty"]
+  },
+  {
+    "disease_name": "Gastroenteritis",
+    "category": "gastrointestinal",
+    "mandatory_symptoms": ["diarrhea", "vomiting"],
+    "optional_symptoms": ["nausea", "abdominal pain", "fever", "dehydration"],
+    "symptom_weights": {
+      "diarrhea": 4,
+      "vomiting": 4,
+      "nausea": 3,
+      "abdominal pain": 3,
+      "fever": 2,
+      "dehydration": 3
+    },
+    "specialist": "Gastroenterologist",
+    "precautions": [
+      "Stay hydrated with electrolyte solutions",
+      "Eat bland foods when able",
+      "Rest and avoid heavy activity",
+      "Wash hands frequently",
+      "Seek medical attention if severe dehydration"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": ["severe dehydration"]
+  },
+  {
+    "disease_name": "Appendicitis",
+    "category": "gastrointestinal",
+    "mandatory_symptoms": ["abdominal pain", "nausea"],
+    "optional_symptoms": ["vomiting", "fever", "loss of appetite", "rebound tenderness"],
+    "symptom_weights": {
+      "abdominal pain": 4,
+      "nausea": 3,
+      "vomiting": 3,
+      "fever": 2,
+      "loss of appetite": 2,
+      "rebound tenderness": 4
+    },
+    "specialist": "General Surgeon",
+    "precautions": [
+      "Seek immediate medical attention",
+      "Do not eat or drink",
+      "Avoid pain medications that mask symptoms",
+      "Go to emergency room",
+      "Surgery may be required"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["severe abdominal pain"]
+  },
+  {
+    "disease_name": "Urinary Tract Infection",
+    "category": "urinary",
+    "mandatory_symptoms": ["frequent urination", "burning urination"],
+    "optional_symptoms": ["lower abdominal pain", "blood in urine", "fever", "chills"],
+    "symptom_weights": {
+      "frequent urination": 4,
+      "burning urination": 4,
+      "lower abdominal pain": 3,
+      "blood in urine": 3,
+      "fever": 2,
+      "chills": 2
+    },
+    "specialist": "Urologist",
+    "precautions": [
+      "Drink plenty of water",
+      "Take prescribed antibiotics",
+      "Avoid caffeine and alcohol",
+      "Urinate after intercourse",
+      "Use proper hygiene"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Kidney Stones",
+    "category": "urinary",
+    "mandatory_symptoms": ["severe flank pain"],
+    "optional_symptoms": ["blood in urine", "nausea", "vomiting", "frequent urination", "burning urination"],
+    "symptom_weights": {
+      "severe flank pain": 4,
+      "blood in urine": 3,
+      "nausea": 2,
+      "vomiting": 2,
+      "frequent urination": 2,
+      "burning urination": 2
+    },
+    "specialist": "Urologist",
+    "precautions": [
+      "Drink plenty of water",
+      "Take pain medications as prescribed",
+      "Strain urine to catch stones",
+      "Seek medical attention for severe pain",
+      "May require medical intervention"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["severe flank pain"]
+  },
+  {
+    "disease_name": "Eczema",
+    "category": "skin",
+    "mandatory_symptoms": ["skin rash", "itching"],
+    "optional_symptoms": ["redness", "dry skin", "inflammation", "blisters"],
+    "symptom_weights": {
+      "skin rash": 4,
+      "itching": 4,
+      "redness": 3,
+      "dry skin": 2,
+      "inflammation": 3,
+      "blisters": 2
+    },
+    "specialist": "Dermatologist",
+    "precautions": [
+      "Moisturize skin regularly",
+      "Avoid triggers like wool or soaps",
+      "Use prescribed creams",
+      "Keep nails short to avoid scratching",
+      "Take antihistamines if needed"
+    ],
+    "severity": "mild",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Cellulitis",
+    "category": "skin",
+    "mandatory_symptoms": ["skin redness", "skin swelling"],
+    "optional_symptoms": ["pain", "warmth", "fever", "red streaks"],
+    "symptom_weights": {
+      "skin redness": 4,
+      "skin swelling": 4,
+      "pain": 3,
+      "warmth": 3,
+      "fever": 2,
+      "red streaks": 4
+    },
+    "specialist": "Dermatologist",
+    "precautions": [
+      "Seek medical attention promptly",
+      "Take prescribed antibiotics",
+      "Elevate affected area",
+      "Apply warm compresses",
+      "Monitor for worsening symptoms"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": ["red streaks", "high fever"]
+  },
+  {
+    "disease_name": "Diabetes Type 2",
+    "category": "endocrine",
+    "mandatory_symptoms": ["increased thirst", "frequent urination"],
+    "optional_symptoms": ["fatigue", "blurred vision", "slow healing", "tingling", "increased hunger"],
+    "symptom_weights": {
+      "increased thirst": 3,
+      "frequent urination": 3,
+      "fatigue": 2,
+      "blurred vision": 2,
+      "slow healing": 2,
+      "tingling": 2,
+      "increased hunger": 2
+    },
+    "specialist": "Endocrinologist",
+    "precautions": [
+      "Monitor blood sugar levels",
+      "Follow prescribed diet and exercise",
+      "Take medications as directed",
+      "Regular check-ups with doctor",
+      "Learn to recognize hypo/hyperglycemia"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Hypothyroidism",
+    "category": "endocrine",
+    "mandatory_symptoms": ["fatigue", "weight gain"],
+    "optional_symptoms": ["cold intolerance", "dry skin", "hair loss", "constipation", "depression"],
+    "symptom_weights": {
+      "fatigue": 3,
+      "weight gain": 3,
+      "cold intolerance": 2,
+      "dry skin": 2,
+      "hair loss": 2,
+      "constipation": 2,
+      "depression": 2
+    },
+    "specialist": "Endocrinologist",
+    "precautions": [
+      "Take thyroid hormone replacement",
+      "Regular thyroid function tests",
+      "Maintain healthy lifestyle",
+      "Monitor symptoms",
+      "Follow up with endocrinologist"
+    ],
+    "severity": "moderate",
+    "emergency_flag_rules": []
+  },
+  {
+    "disease_name": "Malaria",
+    "category": "infectious",
+    "mandatory_symptoms": ["fever", "chills"],
+    "optional_symptoms": ["headache", "body ache", "fatigue", "sweating", "nausea"],
+    "symptom_weights": {
+      "fever": 4,
+      "chills": 4,
+      "headache": 2,
+      "body ache": 2,
+      "fatigue": 2,
+      "sweating": 2,
+      "nausea": 1
+    },
+    "specialist": "Infectious Disease Specialist",
+    "precautions": [
+      "Take antimalarial medications",
+      "Use mosquito nets and repellents",
+      "Seek immediate medical attention",
+      "Stay hydrated",
+      "Monitor for complications"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["high fever"]
+  },
+  {
+    "disease_name": "Tuberculosis",
+    "category": "respiratory",
+    "mandatory_symptoms": ["persistent cough", "weight loss"],
+    "optional_symptoms": ["fever", "night sweats", "fatigue", "chest pain", "coughing blood"],
+    "symptom_weights": {
+      "persistent cough": 4,
+      "weight loss": 3,
+      "fever": 2,
+      "night sweats": 3,
+      "fatigue": 2,
+      "chest pain": 3,
+      "coughing blood": 4
+    },
+    "specialist": "Pulmonologist",
+    "precautions": [
+      "Complete full course of antibiotics",
+      "Isolate until non-infectious",
+      "Cover mouth when coughing",
+      "Regular medical follow-up",
+      "Notify close contacts"
+    ],
+    "severity": "severe",
+    "emergency_flag_rules": ["coughing blood"]
+  }
+]
